@@ -1,4 +1,95 @@
+/* Resetting some basic styles for consistency across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
-  max-width: 40em; 
-  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Title Styling */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+/* Subheading Styling */
+h2, h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Link Styling */
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #388E3C;
+}
+
+/* Hr Styling */
+hr {
+  border: 0;
+  border-top: 2px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Section Styling */
+section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #4CAF50;
+}
+
+footer a:hover {
+  color: #388E3C;
 }
