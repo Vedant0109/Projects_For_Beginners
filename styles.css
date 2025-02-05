@@ -1,95 +1,121 @@
-/* Resetting some basic styles for consistency across browsers */
+
+/* Modern CSS Reset and Base Styles */
+:root {
+  --primary-color: #4CAF50;
+  --primary-dark: #388E3C;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+  --card-bg: #fff;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
-  padding: 20px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Title Styling */
+/* Typography */
 h1 {
   text-align: center;
-  font-size: 2.5rem;
-  color: #4CAF50;
-  margin-bottom: 20px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
 }
 
-/* Subheading Styling */
 h2, h3 {
-  color: #333;
-  margin-bottom: 10px;
+  color: var(--text-color);
+  margin: 1rem 0;
+  font-weight: 600;
 }
 
-/* Paragraph Styling */
 p {
   font-size: 1.1rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   color: #555;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Link Styling */
+/* Links */
 a {
-  color: #4CAF50;
+  color: var(--primary-color);
   text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: #388E3C;
+  color: var(--primary-dark);
+  border-bottom-color: var(--primary-dark);
 }
 
-/* Hr Styling */
+/* Dividers */
 hr {
   border: 0;
-  border-top: 2px solid #ddd;
-  margin: 20px 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+  margin: 2rem 0;
 }
 
-/* Section Styling */
+/* Sections */
 section {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+footer a {
+  font-weight: 500;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1rem;
+  body {
+    padding: 1rem;
   }
 
   section {
-    padding: 15px;
+    padding: 1.5rem;
   }
 }
 
-/* Footer Styling */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 30px;
-}
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #66BB6A;
+    --primary-dark: #81C784;
+    --text-color: #e0e0e0;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+  }
 
-footer a {
-  color: #4CAF50;
-}
-
-footer a:hover {
-  color: #388E3C;
+  body {
+    color-scheme: dark;
+  }
 }
